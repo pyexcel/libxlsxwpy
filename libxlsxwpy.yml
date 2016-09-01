@@ -1,0 +1,14 @@
+overrides: "pyexcel.yaml"
+name: "libxlsxwpy"
+nick_name: xlsxw
+version: 0.0.1
+release: 0.0.1
+file_type: xlsx
+external_module_library: libxlsxwpy
+dependencies:
+  - xlsxwriter
+sources:
+  - pymodule.c
+  - book.c
+  - sheet.c
+description: A plain python wrapper for libxlsxwriter, a C library.
