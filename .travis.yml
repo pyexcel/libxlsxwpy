@@ -27,6 +27,6 @@ script:
   - python setup.py install
   - make test
   - find build
-  - gcov *.c -o build/lib.linux-x86_64-2.7/
+  - gcov *.c -o build/temp.linux-x86_64-2.7/
 after_success:
   - bash <(curl -s https://codecov.io/bash)
