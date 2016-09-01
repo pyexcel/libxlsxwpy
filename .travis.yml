@@ -21,10 +21,12 @@ before_install:
   - make
   - sudo make install
   - cd ../
+  - rm libxlsxwriter/ -rf
 script:
   - CFLAGS="-coverage" python setup.py build_ext --inplace
   - python setup.py install
   - make test
+  - find buld
   - gcov *.c -o build/lib.linux-x86_64-2.7/
 after_success:
   - bash <(curl -s https://codecov.io/bash)
