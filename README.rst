@@ -1,5 +1,5 @@
 ================================================================================
-libxlsxwpy - Let you focus on data, instead of file formats
+libxlsxwpy - Let you focus on data, instead of xlsx format
 ================================================================================
 
 .. image:: https://api.travis-ci.org/pyexcel/libxlsxwpy.svg?branch=master
