@@ -31,6 +31,11 @@ add_worksheet(PyXLSXBook *self, PyObject *args)
   if(!PyArg_ParseTuple(args, "|s", &name))
     return NULL;
 
+  if(!self->handler){
+    PyErr_SetString(PyExc_RuntimeError, "No file name specified");
+    return NULL;
+  }
+
   lxw_worksheet *sheet = workbook_add_worksheet(self->handler, name);
   if (!sheet) Py_RETURN_NONE;
   

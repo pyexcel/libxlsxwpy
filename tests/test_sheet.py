@@ -1,5 +1,6 @@
 import os
 from libxlsxwpy import Book
+from nose.tools import raises
 
 
 def test_sheet():
@@ -16,3 +17,9 @@ def test_sheet():
             sheet.write_string(row, col, col_data)
     book.close()
     os.unlink(test_file)
+
+
+@raises(RuntimeError)
+def test_sheet_exception():
+    book = Book()
+    book.add_sheet("hello world")
