@@ -8,4 +8,5 @@ typedef struct {
   lxw_worksheet *handler;
 } PyXLSXSheet;
 
+
 #endif
