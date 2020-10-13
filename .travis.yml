@@ -5,7 +5,7 @@ compiler:
   - clang
   - gcc
 python:
-  - 2.7
+  - 3.7
 install:
   - sudo pip install pytest
   - sudo apt-get update
@@ -27,6 +27,6 @@ script:
   - python setup.py install
   - make test
   - find build
-  - gcov *.c -o build/temp.linux-x86_64-2.7/
+  - gcov *.c -o build/temp.linux-x86_64-3.7/
 after_success:
   - bash <(curl -s https://codecov.io/bash)
