@@ -11,4 +11,9 @@ sources:
   - pymodule.c
   - book.c
   - sheet.c
+test_dependencies:
+  - pyexcel
+  - pyexcel-xls
 description: A plain python wrapper for libxlsxwriter, a C library.
+python_requires: ">=3.6"
+min_python_version: "3.6"

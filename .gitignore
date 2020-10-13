@@ -1,3 +1,4 @@
+.moban.hashes
 *.pyc
 *~
 .coverage
