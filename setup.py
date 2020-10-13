@@ -11,7 +11,7 @@ import locale
 import platform
 from shutil import rmtree
 
-from distutils.core import setup, Extension
+from setuptools import setup, Extension
 
 
 # Work around mbcs bug in distutils.
