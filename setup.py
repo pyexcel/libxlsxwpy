@@ -82,57 +82,7 @@ PYMODULE = Extension(
 )
 # You do not need to read beyond this line
 PUBLISH_COMMAND = "{0} setup.py sdist bdist_wheel upload -r pypi".format(sys.executable)
-GS_COMMAND = ("gs libxlsxwpy v0.0.1 " +
-              "Find 0.0.1 in changelog for more details")
-NO_GS_MESSAGE = ("Automatic github release is disabled. " +
-                 "Please install gease to enable it.")
-UPLOAD_FAILED_MSG = (
-    'Upload failed. please run "%s" yourself.' % PUBLISH_COMMAND)
 HERE = os.path.abspath(os.path.dirname(__file__))
-
-
-class PublishCommand(Command):
-    """Support setup.py upload."""
-
-    description = "Build and publish the package on github and pypi"
-    user_options = []
-
-    @staticmethod
-    def status(s):
-        """Prints things in bold."""
-        print("\033[1m{0}\033[0m".format(s))
-
-    def initialize_options(self):
-        pass
-
-    def finalize_options(self):
-        pass
-
-    def run(self):
-        try:
-            self.status("Removing previous builds...")
-            rmtree(os.path.join(HERE, "dist"))
-            rmtree(os.path.join(HERE, "build"))
-            rmtree(os.path.join(HERE, "libxlsxwpy.egg-info"))
-        except OSError:
-            pass
-
-        self.status("Building Source and Wheel (universal) distribution...")
-        run_status = True
-        if has_gease():
-            run_status = os.system(GS_COMMAND) == 0
-        else:
-            self.status(NO_GS_MESSAGE)
-        if run_status:
-            if os.system(PUBLISH_COMMAND) != 0:
-                self.status(UPLOAD_FAILED_MSG)
-
-        sys.exit()
-
-
-SETUP_COMMANDS.update({
-    "publish": PublishCommand
-})
 
 
 def has_gease():
@@ -205,5 +155,4 @@ if __name__ == "__main__":
         keywords=KEYWORDS,
         ext_modules=[PYMODULE],
         classifiers=CLASSIFIERS,
-        cmdclass=SETUP_COMMANDS
     )
