@@ -29,7 +29,7 @@ except (ValueError, UnicodeError, locale.Error):
 
 NAME = "libxlsxwpy"
 AUTHOR = "chfw"
-VERSION = ""
+VERSION = "0.0.1"
 EMAIL = "info@pyexcel.org"
 LICENSE = "New BSD"
 DESCRIPTION = (

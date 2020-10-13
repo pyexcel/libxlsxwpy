@@ -1,0 +1,9 @@
+name: libxlsxwpy
+organisation: pyexcel
+releases:
+- changes:
+  - action: Added
+    details:
+    - 'What a feat! python wrapper for libxlsxwriter'
+  date: 10.10.2020
+  version: 0.0.1
