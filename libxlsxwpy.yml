@@ -11,7 +11,9 @@ dependencies:
 sources:
   - pymodule.c
   - book.c
+  - book.h
   - sheet.c
+  - sheet.h
 test_dependencies:
   - pyexcel
   - pyexcel-xlsx

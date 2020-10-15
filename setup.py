@@ -29,14 +29,14 @@ except (ValueError, UnicodeError, locale.Error):
 
 NAME = "libxlsxwpy"
 AUTHOR = "chfw"
-VERSION = "0.0.1"
+VERSION = "0.0.2"
 EMAIL = "info@pyexcel.org"
 LICENSE = "New BSD"
 DESCRIPTION = (
     "A plain python wrapper for libxlsxwriter, a C library."
 )
 URL = "https://github.com/pyexcel/libxlsxwpy"
-DOWNLOAD_URL = "%s/archive/0.0.1.tar.gz" % URL
+DOWNLOAD_URL = "%s/archive/0.0.2.tar.gz" % URL
 FILES = ["README.rst", "CHANGELOG.rst"]
 KEYWORDS = [
     "python",
@@ -76,7 +76,9 @@ PYMODULE = Extension(
     sources=[
         "pymodule.c",
         "book.c",
+        "book.h",
         "sheet.c",
+        "sheet.h",
     ],
     libraries=INSTALL_REQUIRES
 )
