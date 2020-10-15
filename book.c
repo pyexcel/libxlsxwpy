@@ -41,6 +41,7 @@ add_worksheet(PyXLSXBook *self, PyObject *args)
   
   PyXLSXSheet *obj = PyObject_New(PyXLSXSheet, &SheetType);
   obj->handler = sheet;
+  obj->book = self->handler;
   return (PyObject *)obj;
 }
 
@@ -64,7 +65,7 @@ static PyMethodDef methods[] = {
   {"open", (PyCFunction) open_book, METH_VARARGS,
    "Open a file for writing"
    "Returns False if error occurs."},
-  {"add_sheet", (PyCFunction) add_worksheet, METH_VARARGS,
+  {"add_worksheet", (PyCFunction) add_worksheet, METH_VARARGS,
    "Add a sheet into the book"
    "Returns False if error occurs."},
   {"close", (PyCFunction) close_book, METH_VARARGS,

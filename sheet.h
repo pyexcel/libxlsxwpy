@@ -6,6 +6,7 @@
 typedef struct {
   PyObject_HEAD
   lxw_worksheet *handler;
+  lxw_workbook *book;
 } PyXLSXSheet;
 
 

@@ -35,7 +35,7 @@ Here is the python code for `the equivalent C code <http://libxlsxwriter.github.
     >>> book = Book()
     >>> book.open("myexcel.xlsx")
     True
-    >>> sheet = book.add_sheet()
+    >>> sheet = book.add_worksheet()
     >>> sheet.write_string(0, 0, "Hello me!")
     True
     >>> book.close()
