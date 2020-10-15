@@ -76,9 +76,7 @@ PYMODULE = Extension(
     sources=[
         "pymodule.c",
         "book.c",
-        "book.h",
         "sheet.c",
-        "sheet.h",
     ],
     libraries=INSTALL_REQUIRES
 )
