@@ -56,7 +56,7 @@ Fonts, colors and charts are not supported.
 
 Introduction
 ================================================================================
-**libxlsxwpy** is a plain python wrapper for libxlsxwriter, a c library. And it only support writing strings for now.
+**libxlsxwpy** is a plain python wrapper for libxlsxwriter, a c library. And it supports: write string, boolean, datetime and number.
 
 
 
