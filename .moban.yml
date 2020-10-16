@@ -1,6 +1,26 @@
 overrides: "git://github.com/pyexcel/pyexcel-mobans!/mobanfile.yaml"
 configuration:
+  configuration_dir: "git://github.com/pyexcel/pyexcel-mobans!/config"
+  template_dir:
+  - "git://github.com/moremoban/pypi-mobans.git?submodule=true&brach=dev!/statics"
+  - "git://github.com/moremoban/pypi-mobans.git?branch=dev&submodule=true!/templates"
+  - "git://github.com/pyexcel/pyexcel-mobans.git!/templates"
+  - "git://github.com/pyexcel/pyexcel-mobans.git!/statics"
+  - ".moban.d"
   configuration: libxlsxwpy.yml
 targets:
+  - requirements.txt: requirements.txt.jj2
+  - "tests/requirements.txt": "tests/requirements.txt.jj2"
+  - output: CHANGELOG.rst
+    configuration: changelog.yml
+    template: CHANGELOG.rst.jj2
+  - LICENSE: newbsd_license.jj2
+  - lint.sh: lint.script.jj2
+  - ".github/FUNDING.yml": "FUNDING.yml"
+  - ".github/PULL_REQUEST_TEMPLATE.md": PULL_REQUEST_TEMPLATE.md.jj2
+  - ".github/workflows/moban-update.yml": "moban-update.yml"
+  - Makefile: Makefile.jj2
+  - format.sh: format.sh.jj2
+  - CONTRIBUTORS.rst: CONTRIBUTORS.rst.jj2
   - README.rst: custom_README.rst.jj2
   - setup.py: custom_setup.py.jj2
