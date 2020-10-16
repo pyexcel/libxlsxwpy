@@ -4,7 +4,7 @@
 {%endblock%}
 
 {%block features%}
-**{{name}}** is {{description|lower}} And it only support writing strings for now.
+**{{name}}** is {{description|lower}} And it supports: write string, boolean, datetime and number.
 {%endblock%}
 
 {%block custom_installation%}
