@@ -11,7 +11,7 @@ Change log
 **Updated**
 
 #. book.add_sheet is replaced with book.add_worksheet. so that it is the same as
-   its cusine: xlsxwriter
+   its cousin: xlsxwriter
 
 0.0.1 - 10.10.2020
 --------------------------------------------------------------------------------
